@@ -2,39 +2,29 @@ package com.practica.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "PRODUCT")
-public class Product {
+@Table(name = "STATE")
+public class State {
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PRODUCT_ID", nullable = false)
+    @Column(name = "STATE_ID", nullable = false)
     private Integer id;
 
-    @Column(name = "NAME", nullable = false, length = 200)
+    @Column(name = "NAME", nullable = false, length = 20)
     private String name;
-    
-    @Column(name = "PRICE", nullable = false)
-    private Double price;
-    
 
-    @OneToOne
-    @JoinColumn(name = "CATEGORY_ID", nullable = false, foreignKey = @ForeignKey(name = "CATEGORY_FK"))
-    private Category category;
 }

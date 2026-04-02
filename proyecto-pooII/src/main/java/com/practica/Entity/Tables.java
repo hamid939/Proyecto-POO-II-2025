@@ -14,27 +14,28 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "PRODUCT")
-public class Product {
+@Table(name = "TABLES")
+public class Tables {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PRODUCT_ID", nullable = false)
+    @Column(name = "TABLE_ID", nullable = false)
     private Integer id;
 
-    @Column(name = "NAME", nullable = false, length = 200)
-    private String name;
+    @Column(name = "NUM_TABLES", nullable = false)
+    private Integer numTables;
     
-    @Column(name = "PRICE", nullable = false)
-    private Double price;
+    @Column(name = "ABILITY", nullable = false)
+    private Integer ability;
+    
+    @OneToOne
+    @JoinColumn(name = "STATE_ID", nullable = false, foreignKey = @ForeignKey(name = "STATE_FK"))
+    private State state;
     
 
-    @OneToOne
-    @JoinColumn(name = "CATEGORY_ID", nullable = false, foreignKey = @ForeignKey(name = "CATEGORY_FK"))
-    private Category category;
+
 }
