@@ -33,7 +33,7 @@ public class Tables {
     private Integer ability;
     
     @OneToOne
-    @JoinColumn(name = "STATE_ID", nullable = false, foreignKey = @ForeignKey(name = "STATE_FK"))
+    @JoinColumn(name = "STATE_ID", nullable = false, foreignKey = @ForeignKey(name = "STATE-FKT"))
     private State state;
     
 

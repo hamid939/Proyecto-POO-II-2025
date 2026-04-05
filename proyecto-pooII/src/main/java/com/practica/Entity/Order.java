@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "ORDER")
+@Table(name = "ORDERS")
 public class Order {
 	
 	@Id
@@ -44,7 +44,7 @@ public class Order {
     private User user;
     
     @OneToOne
-    @JoinColumn(name = "STATE_ID", nullable = false, foreignKey = @ForeignKey(name = "STATE_FK"))
+    @JoinColumn(name = "STATE_ID", nullable = false, foreignKey = @ForeignKey(name = "STATE_FK_ORDER"))
     private State state;
 
 }
