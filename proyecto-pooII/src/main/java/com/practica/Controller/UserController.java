@@ -19,7 +19,7 @@ import com.practica.Service.IUserService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("api/v1/users")
+@RequestMapping("/v1/users")
 @RequiredArgsConstructor
 
 public class UserController {

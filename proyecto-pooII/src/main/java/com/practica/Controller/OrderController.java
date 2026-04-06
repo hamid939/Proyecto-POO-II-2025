@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 
 @RestController
-@RequestMapping("api/v1/orders")
+@RequestMapping("/v1/orders")
 @RequiredArgsConstructor
 public class OrderController {
 	private final IOrderService service;

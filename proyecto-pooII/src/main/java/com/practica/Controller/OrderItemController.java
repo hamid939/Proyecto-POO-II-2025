@@ -19,7 +19,7 @@ import com.practica.Service.IOrderItemService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("api/v1/orderitems")
+@RequestMapping("/v1/orderitems")
 @RequiredArgsConstructor
 
 public class OrderItemController {

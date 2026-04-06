@@ -19,7 +19,7 @@ import com.practica.Service.ITablesService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("api/v1/tables")
+@RequestMapping("/v1/tables")
 @RequiredArgsConstructor
 
 public class TablesController {

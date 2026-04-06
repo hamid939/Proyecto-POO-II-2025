@@ -19,7 +19,7 @@ import com.practica.Service.IProductService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("api/v1/products")
+@RequestMapping("/v1/products")
 @RequiredArgsConstructor
 
 public class ProductController {

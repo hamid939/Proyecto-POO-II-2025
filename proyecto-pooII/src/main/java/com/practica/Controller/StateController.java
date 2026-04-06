@@ -19,7 +19,7 @@ import com.practica.Service.IStateService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("api/v1/states")
+@RequestMapping("/v1/states")
 @RequiredArgsConstructor
 
 public class StateController {
