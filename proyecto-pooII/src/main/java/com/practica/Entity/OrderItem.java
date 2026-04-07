@@ -40,6 +40,6 @@ public class OrderItem {
     @Column(name = "AMOUNT", nullable = false)
     private Integer amount;
     
-    @Column(name = "DESCRIPTION", nullable = false, length = 20)
+    @Column(name = "DESCRIPTION", nullable = false, length = 1000)
     private String description;
 }
